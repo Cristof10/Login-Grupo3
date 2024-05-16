@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="panelPrincipal" minHeight="-Infinity"  minWidth="-Infinity" opacity="0.7" prefHeight="712.0" prefWidth="919.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pulysproyecto.FXMLVistaController">
+   <children>
+      <AnchorPane cacheShape="false" prefHeight="50.0" prefWidth="1118.0" style="-fx-background-color: #3dc1a8;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="menu" fitHeight="69.0" fitWidth="46.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" smooth="false" AnchorPane.leftAnchor="8.0">
+               <image>
+                  <Image url="@../iconos/burger.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="310.0" layoutY="8.0" prefHeight="11.0" prefWidth="248.0" text="Veterinaria Puly'ss" textFill="WHITE" AnchorPane.leftAnchor="249.0">
+               <font>
+                  <Font name="Impact" size="32.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="logoPulys" fitHeight="72.0" fitWidth="70.0" layoutX="973.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="788.0" AnchorPane.leftAnchor="845.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-13.0">
+         <image>
+            <Image url="@../recursos/pulys.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="paneClientes" layoutX="419.0" layoutY="50.0" prefHeight="795.0" prefWidth="697.0" style="-fx-background-color: #c1ebea;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="419.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
+      <AnchorPane fx:id="paneServicios" layoutX="418.0" layoutY="50.0" prefHeight="686.0" prefWidth="611.0" style="-fx-background-color: #c1ebea;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="419.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
+      <AnchorPane fx:id="paneInventario" layoutX="283.0" layoutY="172.0" prefHeight="1000.0" prefWidth="746.0" style="-fx-background-color: #c1ebea;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="419.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
+      <AnchorPane fx:id="paneCobros" prefHeight="616.0" prefWidth="414.0" style="-fx-background-color: #c1ebea;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="419.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
+      <AnchorPane fx:id="paneParametros" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #c1ebea;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="419.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
+      <AnchorPane fx:id="pane1" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane prefHeight="795.0" prefWidth="60.0" style="-fx-background-color: White;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <VBox layoutX="-2.0" prefHeight="750.0" prefWidth="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView disable="true" fitHeight="160.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="95.0" fitWidth="60.0" opacity="0.74" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../iconos/clientess.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="95.0" fitWidth="60.0" opacity="0.74" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../iconos/icons8-pet-care-50.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="95.0" fitWidth="60.0" opacity="0.74" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../iconos/icons8-caja-llena-50.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="95.0" fitWidth="60.0" opacity="0.74" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../iconos/icons8-efectivo-en-mano-50.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="95.0" fitWidth="60.0" opacity="0.74" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../iconos/icons8-ajustes-50.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView disable="true" fitHeight="95.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView disable="true" fitHeight="95.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pane2" prefHeight="795.0" prefWidth="200.0" style="-fx-background-color: #c1ebea;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <VBox layoutY="165.0" prefHeight="337.0" prefWidth="200.0">
+               <children>
+                  <JFXButton fx:id="btnClientes" alignment="BASELINE_LEFT" onMouseClicked="#btnClientesClick" prefHeight="60.0" prefWidth="200.0" text="Clientes" />
+                  <JFXButton fx:id="btnServicios" alignment="BASELINE_LEFT" onMouseClicked="#btnServiciosClick" prefHeight="60.0" prefWidth="200.0" text="Servicios" />
+                  <JFXButton fx:id="btnInventario" alignment="BASELINE_LEFT" onMouseClicked="#btnInventarioClick" prefHeight="60.0" prefWidth="200.0" text="Inventario" />
+                  <JFXButton fx:id="btnCobros" alignment="BASELINE_LEFT" onMouseClicked="#btnCobrosClick" prefHeight="60.0" prefWidth="200.0" text="Cobros" />
+                  <JFXButton fx:id="btnParametros" alignment="BASELINE_LEFT" onMouseClicked="#btnParametrosClick" prefHeight="60.0" prefWidth="200.0" text="Parametros" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

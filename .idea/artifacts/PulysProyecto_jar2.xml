@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="PulysProyecto:jar2">
+    <output-path>$PROJECT_DIR$/out/artifacts/PulysProyecto_jar2</output-path>
+    <root id="archive" name="PulysProyecto.jar">
+      <element id="module-output" name="PulysProyecto" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/mysql-connector-j-8.0.32/mysql-connector-j-8.0.32.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/charm-glisten-4.4.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="H:/todo un poco/jfoenix-9.0.10.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

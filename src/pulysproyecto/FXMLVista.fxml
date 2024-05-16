@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="panelPrincipal" minHeight="-Infinity" minWidth="-Infinity" opacity="0.7" prefHeight="712.0" prefWidth="919.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pulysproyecto.FXMLVistaController">
+   <children>
+      <ImageView fitHeight="470.0" fitWidth="524.0" layoutX="198.0" layoutY="136.0" opacity="0.52" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="172.23287963867188" AnchorPane.leftAnchor="198.0" AnchorPane.rightAnchor="197.0" AnchorPane.topAnchor="136.0">
+         <image>
+            <Image url="@../recursos/logofondo.png" />
+         </image>
+      </ImageView>
+      <AnchorPane cacheShape="false" prefHeight="50.0" prefWidth="1118.0" style="-fx-background-color: #3dc1a8;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="menu" fitHeight="69.0" fitWidth="46.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" smooth="false" AnchorPane.leftAnchor="8.0">
+               <image>
+                  <Image url="@../iconos/burger.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="310.0" layoutY="8.0" prefHeight="11.0" prefWidth="248.0" text="Veterinaria Puly's" textFill="WHITE" AnchorPane.leftAnchor="249.0">
+               <font>
+                  <Font name="Impact" size="32.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="logoPulys" fitHeight="72.0" fitWidth="70.0" layoutX="973.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="788.0" AnchorPane.leftAnchor="845.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-13.0">
+         <image>
+            <Image url="@../recursos/pulys.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="paneClientes" layoutX="278.0" layoutY="50.0" prefHeight="662.0" prefWidth="641.0" style="-fx-background-color: #c1ebea;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="278.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <TabPane prefHeight="662.0" prefWidth="641.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Registrar">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="29.0" layoutY="64.0" text="Fecha de ingreso:" AnchorPane.leftAnchor="29.0">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font></Label>
+                              <Label layoutX="29.0" layoutY="110.0" text="Nombre del cliente::" AnchorPane.bottomAnchor="506.0" AnchorPane.leftAnchor="29.0">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font></Label>
+                              <Label layoutX="29.0" layoutY="152.0" text="Teléfono:" AnchorPane.bottomAnchor="464.0" AnchorPane.leftAnchor="29.0">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font></Label>
+                              <TextField fx:id="fieldNombreCliente" layoutX="145.0" layoutY="106.0" prefHeight="26.0" prefWidth="158.0" AnchorPane.bottomAnchor="501.0">
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor></TextField>
+                              <TextField fx:id="fieldTelefono" layoutX="145.0" layoutY="148.0" prefHeight="26.0" prefWidth="158.0">
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor></TextField>
+                              <TextField fx:id="fieldFechaIngreso" layoutX="146.0" layoutY="60.0" prefHeight="26.0" prefWidth="158.0">
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor></TextField>
+                              <JFXButton fx:id="btnRegistrarCliente" layoutX="134.0" layoutY="185.0" onMouseClicked="#btnRegistrarClienteClick" prefHeight="26.0" prefWidth="68.0" ripplerFill="#3db5bf" style="-fx-background-color: #9ee0d0;" text="Registrar" AnchorPane.rightAnchor="439.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></JFXButton>
+                              <Label layoutX="31.0" layoutY="392.0" text="Nombre de mascota:">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font></Label>
+                              <TextField fx:id="fieldNombreMascota" layoutX="169.0" layoutY="388.0" prefHeight="26.0" prefWidth="149.0" AnchorPane.leftAnchor="194.0">
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor></TextField>
+                              <Label layoutX="29.0" layoutY="14.0" text="Registrar Cliente">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font></Label>
+                              <Line endX="100.0" layoutX="132.0" layoutY="31.0" startX="-100.0" AnchorPane.leftAnchor="27.5" />
+                              <Label layoutX="26.0" layoutY="244.0" text="Registrar Mascota">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font></Label>
+                              <Line endX="100.0" layoutX="129.0" layoutY="261.0" startX="-100.0" />
+                              <Label layoutX="30.0" layoutY="428.0" text="Peso (kg):">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font></Label>
+                              <Label layoutX="30.0" layoutY="467.0" text="Sexo:">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font></Label>
+                              <Label layoutX="30.0" layoutY="552.0" text="Observaciones:">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font></Label>
+                              <Label layoutX="30.0" layoutY="505.0" text="Raza:">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font></Label>
+                              <TextField fx:id="fieldPeso" layoutX="169.0" layoutY="433.0" AnchorPane.leftAnchor="194.0">
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor></TextField>
+                              <TextField fx:id="fieldObservaciones" layoutX="169.0" layoutY="548.0" AnchorPane.leftAnchor="194.0">
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor></TextField>
+                              <TextField fx:id="fieldRaza" layoutX="169.0" layoutY="501.0" AnchorPane.leftAnchor="194.0">
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor></TextField>
+                              <JFXButton fx:id="btnRegistrarMascota" layoutX="136.0" layoutY="593.0" onMouseClicked="#btnRegistrarMascotaClick" prefHeight="26.0" prefWidth="120.0" ripplerFill="#3db5bf" style="-fx-background-color: #9ee0d0;" text="Registrar Mascota">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></JFXButton>
+                              <JFXComboBox fx:id="cbSexo" layoutX="169.0" layoutY="464.0" prefHeight="25.0" prefWidth="105.0" promptText="Seleccione.." AnchorPane.leftAnchor="194.0" AnchorPane.topAnchor="464.0" />
+                              <TableView fx:id="tableViewCliente" layoutX="194.0" layoutY="282.0" onMouseClicked="#tableViewClienteClick" prefHeight="95.0" prefWidth="248.0" AnchorPane.leftAnchor="194.0">
+                                <columns>
+                                  <TableColumn prefWidth="75.0" text="Id" />
+                                  <TableColumn prefWidth="75.0" text="Nombre" />
+                                    <TableColumn prefWidth="75.0" text="Teléfono" />
+                                </columns>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </TableView>
+                              <Label layoutX="30.0" layoutY="282.0" text="Seleccione el propietario:">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font></Label>
+                              <JFXButton fx:id="btnActualizarTabla" layoutX="471.0" layoutY="284.0" onMouseClicked="#btnActualizarTablaClick" prefHeight="26.0" prefWidth="102.0" ripplerFill="#3db5bf" style="-fx-background-color: #9ee0d0;" text="Actualizar tabla">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></JFXButton>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Consultar y Actualizar">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="633.0" prefWidth="545.0">
+                           <children>
+                              <Label layoutX="29.0" layoutY="14.0" text="Consultar Cliente y Mascota" AnchorPane.leftAnchor="29.0">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font></Label>
+                              <Line endX="100.0" layoutX="130.0" layoutY="32.0" startX="-100.0" AnchorPane.leftAnchor="29.5" />
+                              <TableView fx:id="tableViewClientes" layoutX="19.0" layoutY="90.0" onMouseClicked="#tableViewClientesClick" prefHeight="135.0" prefWidth="603.0">
+                                 <columns>
+                                    <TableColumn fx:id="idClienteColumna" prefWidth="75.0" text="Fecha de Ingreso" />
+                                    <TableColumn prefWidth="75.0" text="Id Cliente" />
+                                    <TableColumn fx:id="fechaColumna" prefWidth="75.0" text="Cliente" />
+                                    <TableColumn fx:id="nombrePacienteColumna" prefWidth="75.0" text="Teléfono" />
+                                    <TableColumn prefWidth="75.0" text="Id Mascota" />
+                                    <TableColumn fx:id="razaColumna" prefWidth="75.0" text="Mascota" />
+                                    <TableColumn fx:id="nombreClienteColumna" prefWidth="75.0" text="Sexo" />
+                                    <TableColumn fx:id="telefonoColumna" prefWidth="75.0" text="Raza" />
+                                    <TableColumn prefWidth="75.0" text="Peso (Kg)" />
+                                    <TableColumn prefWidth="75.0" text="Observaciones" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </TableView>
+                              <Label layoutX="29.0" layoutY="56.0" text="Buscar por cliente:">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font></Label>
+                              <TextField fx:id="fieldBuscarPorNombre" layoutX="142.0" layoutY="52.0" onKeyReleased="#buscarNombreKeyRealesed" onMouseClicked="#fieldBuscarPorNombreClick" prefHeight="26.0" prefWidth="158.0" AnchorPane.leftAnchor="147.0">
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor></TextField>
+                              <JFXButton fx:id="btnActualizarClienteMascota" layoutX="172.0" layoutY="544.0" onMouseClicked="#btnActualizarClienteMascotaClick" ripplerFill="#3dc1a8" style="-fx-background-color: #9ee0d0;" text="Actualizar">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></JFXButton>
+                              <Label layoutX="31.0" layoutY="282.0" text="Teléfono:" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="280.0">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font></Label>
+                              <Label layoutX="30.0" layoutY="426.0" text="Peso (Kg):" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="404.0">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font></Label>
+                              <Label layoutX="30.0" layoutY="466.0" text="Observaciones:" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="435.0">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font></Label>
+                              <TextField fx:id="fieldTelefonoActualizar" layoutX="131.0" layoutY="277.0" AnchorPane.bottomAnchor="331.0" AnchorPane.leftAnchor="131.0">
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor></TextField>
+                              <TextField fx:id="fieldPesoActualizar" layoutX="131.0" layoutY="426.0" AnchorPane.bottomAnchor="206.0">
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor></TextField>
+                              <TextField fx:id="fieldObservacionActualizar" layoutX="131.0" layoutY="463.0" prefHeight="89.0" prefWidth="149.0" AnchorPane.bottomAnchor="110.0">
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor></TextField>
+                              <Label layoutX="30.0" layoutY="249.0" text="Cliente:" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="249.0">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font></Label>
+                              <TextField fx:id="fieldClienteActualizar" layoutX="131.0" layoutY="245.0" AnchorPane.bottomAnchor="361.0" AnchorPane.leftAnchor="131.0">
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor></TextField>
+                              <Label layoutX="31.0" layoutY="317.0" text="Mascota:" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="311.0">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font></Label>
+                              <TextField fx:id="fieldMascotaActualizar" layoutX="131.0" layoutY="308.0" AnchorPane.topAnchor="308.0">
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor></TextField>
+                              <Label layoutX="36.0" layoutY="353.0" text="Sexo:" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="342.0">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font></Label>
+                              <TextField fx:id="fieldSexoActualizar" layoutX="131.0" layoutY="339.0" AnchorPane.leftAnchor="131.0" AnchorPane.topAnchor="339.0">
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor></TextField>
+                              <Label layoutX="32.0" layoutY="380.0" text="Raza:" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="373.0">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font></Label>
+                              <TextField fx:id="fieldRazaActualizar" layoutX="131.0" layoutY="376.0" AnchorPane.leftAnchor="131.0" AnchorPane.topAnchor="371.0">
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor></TextField>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children></AnchorPane>
+      <AnchorPane fx:id="paneServicios" layoutX="418.0" layoutY="50.0" prefHeight="686.0" prefWidth="611.0" style="-fx-background-color: #c1ebea;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="419.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <TabPane fx:id="tabPane_servicios" layoutX="-2.0" layoutY="-1.0" prefHeight="666.0" prefWidth="503.0" tabClosingPolicy="UNAVAILABLE">
+               <tabs>
+                  <Tab fx:id="tab_ListarServicios" text="Listar Servicios">
+                     <content>
+                        <AnchorPane fx:id="PanelServicios" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="Table_CitasServicios" layoutX="18.0" layoutY="137.0" prefHeight="226.0" prefWidth="467.0">
+                                 <columns>
+                                    <TableColumn fx:id="IDCita" prefWidth="75.0" text="ID" />
+                                    <TableColumn fx:id="FechaAgendada" prefWidth="108.33331298828125" text="Fecha Agendada" />
+                                    <TableColumn fx:id="MotivoCita" prefWidth="75.0" text="Motivo" />
+                                    <TableColumn fx:id="IDMascota" prefWidth="75.0" text="Mascota" />
+                                    <TableColumn fx:id="IDCliente" editable="false" prefWidth="75.0" sortable="false" text="Cliente" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </TableView>
+                              <TextField fx:id="txt_ConsultasCitas" layoutX="30.0" layoutY="83.0" onMouseClicked="#txt_ConsultasCitasClick" prefHeight="25.0" prefWidth="294.0">
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor></TextField>
+                              <JFXButton fx:id="btn_BuscarCita" layoutX="348.0" layoutY="83.0" onMouseClicked="#btn_BuscarCitaClick" prefHeight="25.0" prefWidth="115.0" text="Buscar">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></JFXButton>
+                              <JFXButton fx:id="btn_NuevaCita" layoutX="39.0" layoutY="448.0" onMouseClicked="#btn_NuevaCitaSClick" prefHeight="25.0" prefWidth="147.0" text="Nuevo">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></JFXButton>
+                              <JFXButton fx:id="btn_ActualizarCita" layoutX="214.0" layoutY="448.0" onMouseClicked="#btn_ActualizarCitaClick" prefHeight="25.0" prefWidth="104.0" text="Actualizar">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></JFXButton>
+                              <Text layoutX="199.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CONSULTAS">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Text>
+                              <JFXButton fx:id="btn_EliminarCita" layoutX="381.0" layoutY="448.0" onMouseClicked="#btn_EliminarCitaClick" text="Eliminar">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></JFXButton>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="tab_RegistroServicios" text="Registrar">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Text layoutX="35.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Atención requerida:" wrappingWidth="115.0" />
+                              <DatePicker fx:id="txt_FechaCita" disable="true" layoutX="173.0" layoutY="193.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></DatePicker>
+                              <Text layoutX="39.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seleccionar Mascota" />
+                              <JFXComboBox fx:id="cb_MascotaCita" layoutX="173.0" layoutY="103.0" prefHeight="25.0" prefWidth="143.0" unFocusColor="#f82424">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></JFXComboBox>
+                              <Text layoutX="349.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id Mascota" />
+                              <TextField fx:id="txt_IDMascota" disable="true" editable="false" layoutX="416.0" layoutY="102.0" prefHeight="25.0" prefWidth="67.0" />
+                              <Text layoutX="37.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cliente asociado: " wrappingWidth="115.0" />
+                              <TextField fx:id="txt_ClienteAsociado" disable="true" editable="false" layoutX="172.0" layoutY="146.0" prefHeight="25.0" prefWidth="176.0" />
+                              <JFXButton fx:id="btn_GuardarCita" layoutX="65.0" layoutY="443.0" onMouseClicked="#btn_GuardarCitaClick" prefHeight="25.0" prefWidth="137.0" text="Guardar">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></JFXButton>
+                              <JFXButton fx:id="btn_CancelarCita" layoutX="260.0" layoutY="443.0" onMouseClicked="#btn_CancelarCitaClick" text="Cancelar">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></JFXButton>
+                              <Text layoutX="161.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="REGISTRO DE SERVICIO">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="txt_IDCliente" disable="true" editable="false" layoutX="422.0" layoutY="146.0" prefHeight="25.0" prefWidth="70.0" />
+                              <Text layoutX="365.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id Cliente" />
+                              <JFXTextArea fx:id="txt_MotCita" focusColor="#ff0707" layoutX="151.0" layoutY="264.0" prefHeight="154.0" prefWidth="325.0">
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor></JFXTextArea>
+                              <JFXCheckBox fx:id="checkbox_AgendarCitaa" layoutX="45.0" layoutY="197.0" onMouseClicked="#checkbox_AgendarCitaaClick" text="Agendar Cita">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></JFXCheckBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="tab_ActualizacionServicios" text="Actualizar">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="129.0" layoutY="35.0" prefHeight="27.0" prefWidth="284.0" text="ACTUALIZACIÓN DE REGISTRO" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txt_ActualizaMascota" disable="true" layoutX="121.0" layoutY="107.0" prefHeight="25.0" prefWidth="126.0" />
+                              <Text layoutX="44.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mascota" />
+                              <Text layoutX="271.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cliente" />
+                              <TextField fx:id="txt_ActualizaCliente" disable="true" layoutX="340.0" layoutY="107.0" prefHeight="25.0" prefWidth="109.0" />
+                              <DatePicker fx:id="txt_ActualizarDate" disable="true" layoutX="203.0" layoutY="180.0" prefHeight="25.0" prefWidth="136.0" />
+                              <Text layoutX="25.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Atención requerida:" />
+                              <JFXTextArea fx:id="txt_ActualizarMotivoCita" focusColor="RED" layoutX="142.0" layoutY="271.0" prefHeight="170.0" prefWidth="331.0">
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor></JFXTextArea>
+                              <JFXButton fx:id="btn_ActualizarReg" layoutX="142.0" layoutY="499.0" onMouseClicked="#btn_ActualizarRegClick" text="Actualizar">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></JFXButton>
+                              <JFXButton fx:id="btn_CancelarActReg" layoutX="313.0" layoutY="499.0" onMouseClicked="#btn_CancelarActRegClick" text="Cancelar">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></JFXButton>
+                              <CheckBox fx:id="checkbox_ActualizarReg" layoutX="111.0" layoutY="184.0" mnemonicParsing="false" onMouseClicked="#checkbox_ActualizarRegClick" text="Agendar Cita">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></CheckBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </children></AnchorPane>
+      <AnchorPane fx:id="paneInventario" layoutX="419.0" layoutY="50.0" prefHeight="1000.0" prefWidth="746.0" style="-fx-background-color: #c1ebea;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="419.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <Label layoutX="152.0" layoutY="311.0" prefHeight="40.0" prefWidth="208.0" text="CONSULTA DE INVENTARIO ">
+               <font>
+                  <Font name="Goudy Old Style" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="fieldInvConsultarNombre" layoutX="50.0" layoutY="356.0" />
+            <TextField fx:id="fieldInvConsultarID" layoutX="296.0" layoutY="356.0" />
+            <TableView fx:id="TableViewInventario" layoutX="29.0" layoutY="420.0" onMouseClicked="#TableViewInventarioclick" prefHeight="200.0" prefWidth="453.0">
+               <columns>
+                  <TableColumn fx:id="idInventarioColumna" prefWidth="75.0" text="ID Producto" />
+                  <TableColumn fx:id="nombre_productoColumna" prefWidth="137.0" text="Nombre del producto" />
+                  <TableColumn fx:id="inventarioCategoriaColumna" prefWidth="70.0" text="Categoría" />
+                  <TableColumn fx:id="inventarioPrecioColumna" prefWidth="51.0" text="Precio" />
+                  <TableColumn fx:id="inventarioFechaVencColumna" prefWidth="112.0" text="Fecha vencimiento" />
+               </columns>
+            </TableView>
+            <Label layoutX="170.0" layoutY="14.0" prefHeight="40.0" prefWidth="193.0" text="INGRESAR AL INVENTARIO">
+               <font>
+                  <Font name="Goudy Old Style" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="fieldInvNombre" layoutX="221.0" layoutY="66.0" />
+            <TextField fx:id="fieldInvCategoria" layoutX="221.0" layoutY="112.0" />
+            <TextField fx:id="fieldInvCosto" layoutX="221.0" layoutY="145.0" />
+            <TextField fx:id="fieldInvVencimiento" layoutX="222.0" layoutY="184.0" />
+            <Label layoutX="59.0" layoutY="70.0" text="Nombre del producto" />
+            <Label layoutX="77.0" layoutY="107.0" text="Categoría" />
+            <Label layoutX="63.0" layoutY="149.0" text="Costo de venta" />
+            <Label layoutX="31.0" layoutY="188.0" text="Fecha de vencimiento (opcional)" />
+            <JFXButton fx:id="btnInvRegistrar" layoutX="218.0" layoutY="235.0" onMouseClicked="#btnInvRegistrarClick" ripplerFill="BLACK" text="Registrar" />
+            <JFXButton fx:id="btnInvConsultarNombre" layoutX="58.0" layoutY="387.0" onMouseClicked="#btnInvConsultarNombreClick" text="Consultar por nombre" />
+            <JFXButton fx:id="btnInvConsultarID" layoutX="290.0" layoutY="387.0" onMouseClicked="#btnInvConsultarIDClick" text="Consultar por identificación" />
+            <JFXButton fx:id="btneditarinv" layoutX="34.0" layoutY="623.0" onMouseClicked="#btnInvEditarClick" text="Editar características del producto" />
+            <JFXButton fx:id="btninvproductoscad" layoutX="256.0" layoutY="623.0" onMouseClicked="#btnproductcadclick" text="Consultar productos próximos a caducar" />
+            <DatePicker fx:id="dpInvFechaVenc" layoutX="209.0" layoutY="184.0" />
+         </children></AnchorPane>
+      <AnchorPane fx:id="paneCobros" prefHeight="616.0" prefWidth="414.0" style="-fx-background-color: #c1ebea;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="419.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <AnchorPane fx:id="paneCobros1" prefHeight="636.0" prefWidth="469.0" style="-fx-background-color: #c1ebea;">
+               <children>
+                  <TabPane prefHeight="635.0" prefWidth="489.0" tabClosingPolicy="UNAVAILABLE">
+                     <tabs>
+                        <Tab text="Ingresos">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="581.0" prefWidth="463.0">
+                                 <children>
+                                    <TextField fx:id="fieldIngFecha" layoutX="199.0" layoutY="83.0" />
+                                    <TextField fx:id="fieldIngHora" layoutX="198.0" layoutY="128.0" />
+                                    <TextField fx:id="fieldIngMonto" layoutX="198.0" layoutY="174.0" />
+                                    <Label layoutX="217.0" layoutY="14.0" text="INGRESOS" />
+                                    <Label layoutX="69.0" layoutY="222.0" text="Motivo del ingreso" />
+                                    <Label layoutX="81.0" layoutY="87.0" text="Fecha de ingreso" />
+                                    <Label layoutX="100.0" layoutY="132.0" text="Hora" />
+                                    <Label layoutX="101.0" layoutY="178.0" text="Monto" />
+                                    <TableView fx:id="tableViewIngMotivo" layoutX="29.0" layoutY="364.0" prefHeight="189.0" prefWidth="431.0">
+                                       <columns>
+                                          <TableColumn fx:id="fechaingrcolumna" prefWidth="95.0" text="Fecha ingreso" />
+                                          <TableColumn fx:id="horaingcolumna" prefWidth="50.0" text="Hora" />
+                                          <TableColumn fx:id="montoingcolumna" prefWidth="75.0" text="Monto" />
+                                          <TableColumn fx:id="motivoingcolumna" prefWidth="210.0" text="Motivo ingreso" />
+                                       </columns>
+                                    </TableView>
+                                    <JFXButton fx:id="btnIngRegistrar" layoutX="192.0" layoutY="324.0" onMouseClicked="#btnIngRegistrarClick" text="Registrar Ingreso" />
+                                    <TextArea fx:id="areaIngMotivo" layoutX="198.0" layoutY="216.0" prefHeight="87.0" prefWidth="248.0" />
+                                    <JFXButton fx:id="btnEditarIngreso" layoutX="200.0" layoutY="567.0" text="Editar Ingreso" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Egresos">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="231.0" layoutY="14.0" text="EGRESOS" />
+                                    <TextField fx:id="fieldEgreFecha" layoutX="207.0" layoutY="60.0" />
+                                    <TextField fx:id="fieldEgreHora" layoutX="207.0" layoutY="107.0" />
+                                    <TextField fx:id="fieldEgreMonto" layoutX="207.0" layoutY="152.0" />
+                                    <Label layoutX="71.0" layoutY="64.0" text="Fecha de egreso" />
+                                    <Label layoutX="114.0" layoutY="111.0" text="Hora" />
+                                    <Label layoutX="109.0" layoutY="156.0" text="Monto" />
+                                    <TextArea fx:id="areaEgreMotivo" layoutX="208.0" layoutY="191.0" prefHeight="115.0" prefWidth="248.0" />
+                                    <Label layoutX="93.0" layoutY="201.0" text="Motivo de egreso" />
+                                    <JFXButton fx:id="btnEgreRegistrar" layoutX="208.0" layoutY="319.0" onMouseClicked="#btnEgreRegistrar" text="Registrar Egreso" />
+                                    <TableView fx:id="tableViewEgreMotivo" layoutX="41.0" layoutY="368.0" prefHeight="189.0" prefWidth="431.0">
+                                       <columns>
+                                          <TableColumn fx:id="fechaegrcolumna" prefWidth="95.0" text="Fecha egreso" />
+                                          <TableColumn fx:id="horaegrcolumna" prefWidth="50.0" text="Hora" />
+                                          <TableColumn fx:id="montoegrcolumna" prefWidth="75.0" text="Monto" />
+                                          <TableColumn fx:id="motivoegrcolumna" prefWidth="210.0" text="Motivo egreso" />
+                                       </columns>
+                                    </TableView>
+                                    <JFXButton fx:id="btnEditarEgreso" layoutX="219.0" layoutY="580.0" text="Editar Egreso" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Balance">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="231.0" layoutY="14.0" text="BALANCE" />
+                                    <TableView fx:id="tableViewBalanIng" layoutX="41.0" layoutY="103.0" prefHeight="127.0" prefWidth="431.0">
+                                       <columns>
+                                          <TableColumn fx:id="fechabalaning" prefWidth="95.0" text="Fecha ingreso" />
+                                          <TableColumn fx:id="horabalaning" prefWidth="50.0" text="Hora" />
+                                          <TableColumn fx:id="montobalaning" prefWidth="75.0" text="Monto" />
+                                          <TableColumn fx:id="motivobalaning" prefWidth="210.0" text="Motivo ingreso " />
+                                       </columns>
+                                    </TableView>
+                                    <TableView fx:id="tableviewBalanEgre" layoutX="41.0" layoutY="260.0" prefHeight="125.0" prefWidth="431.0">
+                                       <columns>
+                                          <TableColumn fx:id="fechabalanegr" prefWidth="95.0" text="Fecha egreso" />
+                                          <TableColumn fx:id="horabalanegr" prefWidth="50.0" text="Hora" />
+                                          <TableColumn fx:id="montobalanegr" prefWidth="75.0" text="Monto" />
+                                          <TableColumn fx:id="motivobalanegr" prefWidth="210.0" text="Motivo egreso" />
+                                       </columns>
+                                    </TableView>
+                                    <TableView fx:id="tableViewBalanBalanc" layoutX="41.0" layoutY="419.0" prefHeight="127.0" prefWidth="431.0">
+                                       <columns>
+                                          <TableColumn fx:id="fechabalancfin" prefWidth="95.0" text="Fecha " />
+                                          <TableColumn fx:id="motivobalanfin" prefWidth="170.0" text="Motivo" />
+                                          <TableColumn fx:id="balancebalancfin" prefWidth="149.0" text="Balance" />
+                                       </columns>
+                                    </TableView>
+                                    <TextField fx:id="fieldBalanInicio" layoutX="96.0" layoutY="56.0" />
+                                    <TextField fx:id="fieldBalanFinal" layoutX="323.0" layoutY="56.0" />
+                                    <JFXButton fx:id="btnBalancConsul" layoutX="219.0" layoutY="558.0" onMouseClicked="#btnBalancConsulClick" text="Consultar" />
+                                    <Label layoutX="20.0" layoutY="60.0" text="Fecha incio" />
+                                    <Label layoutX="261.0" layoutY="60.0" text="Fecha fin " />
+                                    <DatePicker fx:id="dpFechaInicio" layoutX="84.0" layoutY="56.0" />
+                                    <DatePicker fx:id="dpFechaFin" layoutX="311.0" layoutY="56.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+      <AnchorPane fx:id="paneParametros" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #c1ebea;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="419.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
+      <AnchorPane fx:id="pane1" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane prefHeight="795.0" prefWidth="60.0" style="-fx-background-color: White;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <VBox layoutX="-2.0" prefHeight="750.0" prefWidth="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView disable="true" fitHeight="160.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="95.0" fitWidth="60.0" opacity="0.74" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../iconos/clientess.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="95.0" fitWidth="60.0" opacity="0.74" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../iconos/icons8-pet-care-50.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="95.0" fitWidth="60.0" opacity="0.74" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../iconos/icons8-caja-llena-50.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="95.0" fitWidth="60.0" opacity="0.74" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../iconos/icons8-efectivo-en-mano-50.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="95.0" fitWidth="60.0" opacity="0.74" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../iconos/icons8-ajustes-50.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView disable="true" fitHeight="95.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView disable="true" fitHeight="95.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pane2" prefHeight="795.0" prefWidth="201.0" style="-fx-background-color: #c1ebea;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <VBox layoutY="165.0" prefHeight="337.0" prefWidth="200.0">
+               <children>
+                  <JFXButton fx:id="btnClientes" alignment="BASELINE_LEFT" onMouseClicked="#btnClientesClick" prefHeight="60.0" prefWidth="200.0" ripplerFill="#3dc1a8" text="Clientes">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></JFXButton>
+                  <JFXButton fx:id="btnServicios" alignment="BASELINE_LEFT" onMouseClicked="#btnServiciosClick" prefHeight="60.0" prefWidth="200.0" ripplerFill="#3dc1a8" text="Servicios">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></JFXButton>
+                  <JFXButton fx:id="btnInventario" alignment="BASELINE_LEFT" onMouseClicked="#btnInventarioClick" prefHeight="60.0" prefWidth="200.0" ripplerFill="#3dc1a8" text="Inventario">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></JFXButton>
+                  <JFXButton fx:id="btnCobros" alignment="BASELINE_LEFT" onMouseClicked="#btnCobrosClick" prefHeight="60.0" prefWidth="200.0" ripplerFill="#3dc1a8" text="Cobros">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></JFXButton>
+                  <JFXButton fx:id="btnParametros" alignment="BASELINE_LEFT" onMouseClicked="#btnParametrosClick" prefHeight="60.0" prefWidth="200.0" ripplerFill="#3dc1a8" text="Auditoria" visible="false">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></JFXButton>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
