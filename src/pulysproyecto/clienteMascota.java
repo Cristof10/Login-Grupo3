@@ -18,7 +18,6 @@ public class clienteMascota
         this.peso = peso;
         this.idCliente=idCliente;
         this.idMascota=idMascota;
-
     }
 
     public String getDate() {

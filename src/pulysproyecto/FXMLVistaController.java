@@ -42,11 +42,11 @@ import java.sql.Statement;
 
 public class FXMLVistaController implements Initializable {
 
-    private String url ="jdbc:mysql://localhost:3306/pulys";
+    private String url ="jdbc:mysql://upljdpmahr9anxsd:heJbzFvn2MUpPXnNSj57@bsidnp5kq4v9fxosfze7-mysql.services.clever-cloud.com:3306/bsidnp5kq4v9fxosfze7";
 
-    private String user = "root";
+    private String user = "upljdpmahr9anxsd";
 
-    private String password = "root";
+    private String password = "heJbzFvn2MUpPXnNSj57";
 
     public String getUrl() {
         return url;

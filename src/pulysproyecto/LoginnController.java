@@ -78,7 +78,9 @@ public class LoginnController implements Initializable {
             System.out.println("NO CONEXION");
         }
 
-        if(user.equals(userBD) && password.equals(passwordBD) && !user.isEmpty() && !password.isEmpty()){
+        /*
+        CASO FALLO 1: El programa permite ingresa cuando los campos de usuario y contraseña estan vacios.
+        if(user.equals(userBD) && password.equals(passwordBD)){
             try{
                 Stage loginStage = new Stage();
                 Parent root = FXMLLoader.load(getClass().getResource("FXMLVista.fxml"));
@@ -87,6 +89,61 @@ public class LoginnController implements Initializable {
                 loginStage.show();
 
                 ((Stage)(((Button)event.getSource()).getScene().getWindow())).close();
+            }catch (Exception e){
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "Las credenciales ingresadas son incorrectas", "Error de inicio de sesión", JOptionPane.ERROR_MESSAGE);
+        }
+        */
+
+
+
+        /*
+        CASO FALLO 2: El programa a pesar de ingresar con las credenciales correctas muestra un mensaje de error
+        if(user.equals(userBD) && password.equals(passwordBD) && !user.isEmpty() && !password.isEmpty()){
+            try{
+                Stage loginStage = new Stage();
+                Parent root = FXMLLoader.load(getClass().getResource("FXMLVista.fxml"));
+                Scene scene = new Scene(root);
+                loginStage.setScene(scene);
+                loginStage.show();
+                JOptionPane.showMessageDialog(null, "Las credenciales ingresadas son incorrectas", "Error de inicio de sesión", JOptionPane.ERROR_MESSAGE);
+                ((Stage)(((Button)event.getSource()).getScene().getWindow())).close();
+
+            }catch (Exception e){
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "Las credenciales ingresadas son incorrectas", "Error de inicio de sesión", JOptionPane.ERROR_MESSAGE);
+        }
+
+        */
+
+
+        /*
+        CASO CORRECTO 1: Cuando se envian campos vacíos no permite ingresar a la aplicación
+
+        Este problema detallado en el CASO FALLO 1 se soluciona al momento de colocar las condiciones correctas dentro del "if" respectivo, tal cual como se
+        muestra en el código funcional a continuación.
+
+        CASO CORRECTO 2: Cuando ingreso a la aplicación de forma correcta no me muestra ningún mensaje de error.
+
+        Este problema detallado en el CASO FALLO 2 se soluciona al eliminar la linea de código:
+
+        "JOptionPane.showMessageDialog(null, "Las credenciales ingresadas son incorrectas", "Error de inicio de sesión", JOptionPane.ERROR_MESSAGE);"
+
+        Esta linea de código al estar presente en el caso correcto del condicional tambien se mostraba generando un defecto del sistema
+
+         */
+
+        if(user.equals(userBD) && password.equals(passwordBD) && !user.isEmpty() && !password.isEmpty()){
+            try{
+                Stage loginStage = new Stage();
+                Parent root = FXMLLoader.load(getClass().getResource("FXMLVista.fxml"));
+                Scene scene = new Scene(root);
+                loginStage.setScene(scene);
+                loginStage.show();
+                ((Stage)(((Button)event.getSource()).getScene().getWindow())).close();
+
             }catch (Exception e){
             }
         }else{
