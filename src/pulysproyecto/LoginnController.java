@@ -124,7 +124,6 @@ public class LoginnController implements Initializable {
 
         Este problema detallado en el CASO FALLO 1 se soluciona al momento de colocar las condiciones correctas dentro del "if" respectivo, tal cual como se
         muestra en el código funcional a continuación.
-
         CASO CORRECTO 2: Cuando ingreso a la aplicación de forma correcta no me muestra ningún mensaje de error.
 
         Este problema detallado en el CASO FALLO 2 se soluciona al eliminar la linea de código:
